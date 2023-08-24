@@ -1,3 +1,7 @@
+/*
+    This is the design of the slave interface
+*/
+
 module SPI_Slave #(parameter ADDR_SIZE = 8)(
     input clk, rst_n, SS_n, MOSI, tx_valid,
     input [ADDR_SIZE - 1 : 0] tx_data,
@@ -12,7 +16,12 @@ module SPI_Slave #(parameter ADDR_SIZE = 8)(
     localparam READ_ADD = 3'b011;
     localparam READ_DATA = 3'b100;
 
-    // Choosing the FSM encoding
+    /* 
+        The following line is used in VIVADO to choose the encoding style.
+        I used the sequential encoding style as it has the highest setup 
+        slack which mean it makes you capable of using a clock with
+        higher frequency than the other encoding styles.
+    */
     (* fsm_encoding = "sequential" *)
     reg [2 : 0] cs, ns;
 
