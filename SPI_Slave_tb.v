@@ -1,3 +1,7 @@
+/*
+    This is the testbench of the slave interface
+*/
+
 module SPI_Slave_tb ();
     localparam ADDR_SIZE = 8;
 
