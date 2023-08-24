@@ -1,3 +1,7 @@
+/*
+    This is the design of a parameterized synchronous RAM with synchronous reset. 
+*/
+
 module RAM #(parameter MEM_DEPTH = 256, ADDR_SIZE = 8)(
     input clk, rst_n, rx_valid,
     input [ADDR_SIZE + 1 : 0] din,
@@ -17,6 +21,7 @@ module RAM #(parameter MEM_DEPTH = 256, ADDR_SIZE = 8)(
             dout <= 0;
         end
         else if (rx_valid) 
+            // The control unit
             case (din [(ADDR_SIZE + 1) : (ADDR_SIZE)])
                 2'b00:      write_addr <= din [ADDR_SIZE - 1 : 0];    
                 2'b01:      mem [write_addr] <= din [ADDR_SIZE - 1 : 0];
