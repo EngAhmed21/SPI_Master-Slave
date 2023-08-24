@@ -1,3 +1,7 @@
+/*
+    The testbench of RAM
+*/
+
 module RAM_tb ();
     localparam MEM_DEPTH = 256;
     localparam ADDR_SIZE = 8;
