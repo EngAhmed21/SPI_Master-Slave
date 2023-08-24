@@ -1,3 +1,7 @@
+/*
+    This is the testbench of the one shot timer
+*/
+
 module one_shot_timer_tb();    
     localparam FINAL_VALUE = 9;
     
