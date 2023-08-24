@@ -1,3 +1,7 @@
+/*
+    This is the wrapper that contains the slave interface and the RAM in one block.
+*/
+
 module SPI_Wrapper #(parameter MEM_DEPTH = 256, ADDR_SIZE = 8) (
     input clk, rst_n, SS_n, MOSI,
     output MISO
