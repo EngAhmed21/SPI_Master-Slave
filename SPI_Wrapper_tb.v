@@ -1,3 +1,7 @@
+/*
+    The testbench of the wrapper
+*/
+
 module SPI_Wrapper_tb ();
     localparam ADDR_SIZE = 8;
     localparam MEM_DEPTH = 256;
