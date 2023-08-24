@@ -1,3 +1,7 @@
+/*
+    This is the design of the one shot timer
+*/
+
 module one_shot_timer #(parameter FINAL_VALUE = 9) (
     input clk, rst_n,
     output done
@@ -13,8 +17,7 @@ module one_shot_timer #(parameter FINAL_VALUE = 9) (
     end    
     
     /*  It is an one-shot timer, so its value won't return to 0
-        unless the reset signal is asserted.
-    */
+        unless the reset signal is asserted.  */
     always @(*) begin
         if (done) 
             Q_next = Q_reg; 
