@@ -4,7 +4,7 @@ Serial Peripheral Interface or SPI is a synchronous serial communication protoco
 Specifications of the design:               
 (1) Inputs & Outputs                    
     clk  >>   Clock           
-    rst  >>   Active high asynchronous reset                       
+    rst_n  >>   Active low synchronous reset                       
     SS_n >>   Active low enable signal which activate or deactivate  the device                        
     MOSI >>   The serial input                      
     MISO >>   The serial output                     
